@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/fragmentNowPlaying">
+
+    <fragment
+        android:id="@+id/fragmentNowPlaying"
+        android:name="com.example.movies_marc_mnicolas_oliva.fragments.FragmentNowPlaying"
+        android:label="fragment_now_playing"
+        tools:layout="@layout/fragment_now_playing" >
+        <action
+            android:id="@+id/action_fragmentNowPlaying_to_fragmentTickets"
+            app:destination="@id/fragmentTickets" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTickets"
+        android:name="com.example.movies_marc_mnicolas_oliva.fragments.FragmentTickets"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragment_tickets" />
+</navigation>

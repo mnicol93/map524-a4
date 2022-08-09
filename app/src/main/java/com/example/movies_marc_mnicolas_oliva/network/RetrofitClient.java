@@ -30,7 +30,6 @@ public class RetrofitClient {
         // create the retrofit instance
         Retrofit retrofit = new Retrofit.Builder()
                 .client(okHttpClient)
-                // TODO: Add the base url of the api to the retrofit client
                 .baseUrl(api.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();

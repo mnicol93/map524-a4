@@ -12,29 +12,29 @@ import android.view.ViewGroup;
 
 import com.example.movies_marc_mnicolas_oliva.R;
 import com.example.movies_marc_mnicolas_oliva.databinding.FragmentNowPlayingBinding;
+import com.example.movies_marc_mnicolas_oliva.databinding.FragmentTicketsBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FragmentNowPlaying #newInstance} factory method to
+ * Use the {@link FragmentTickets #newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentNowPlaying extends Fragment {
-    private FragmentNowPlayingBinding binding;
+public class FragmentTickets extends Fragment {
+    private FragmentTicketsBinding binding;
 
-    public FragmentNowPlaying() {
+    public FragmentTickets() {
         super(R.layout.fragment_now_playing);
     }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
 
-        // Click handlers and logic
-
+        // click handlers and logic
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentNowPlayingBinding.inflate(inflater, container, false);
+        binding = FragmentTicketsBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
         return view;
     }
