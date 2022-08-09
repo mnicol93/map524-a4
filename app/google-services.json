@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "641350785768",
+    "project_id": "assignment4-31b9f",
+    "storage_bucket": "assignment4-31b9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641350785768:android:5eab3ac7285f45e66e475d",
+        "android_client_info": {
+          "package_name": "com.example.movies_marc_mnicolas_oliva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641350785768-74753ilj2qgscoomsnijaefkv2icqvev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5YagrCpyWjmroXGOLF2SLVS5mmI8U3Kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641350785768-74753ilj2qgscoomsnijaefkv2icqvev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
