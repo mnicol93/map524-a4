@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:title="Playing Now" />
+        android:id="@+id/fragmentNowPlaying"
+        android:title="Now Playing"
+        android:icon="@drawable/ic_playing" />
 
     <item
-        android:title="Bought Tickets"/>
+        android:id="@+id/fragmentTickets"
+        android:title="My Tickets"
+        android:icon="@drawable/ic_credit_card" />
 </menu>

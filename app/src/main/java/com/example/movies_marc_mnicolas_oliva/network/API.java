@@ -15,7 +15,6 @@ public interface API {
     // Base URL
     public final String BASE_URL = "https://api.themoviedb.org/3/movie/";
     // Connection endpoints
-    // https://botw-compendium.herokuapp.com/api/v2/category/equipment
     @GET("now_playing?api_key=e4bbf7fb86a88e4c7e05699aaec48772&language=en-US&page=1&region=CA")
     public Call<ItemResponse> getAllItems();
 
