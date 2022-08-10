@@ -1,5 +1,7 @@
 package com.example.movies_marc_mnicolas_oliva.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Date;
 /*
   "results": [
@@ -29,6 +31,10 @@ import java.util.Date;
 public class Movie {
     private String title;
     private String overview;
+
+    @SerializedName("poster_path")
+    private String imgUrl;
+
     private int id;
     private Date release_date;
     private double vote_average;
