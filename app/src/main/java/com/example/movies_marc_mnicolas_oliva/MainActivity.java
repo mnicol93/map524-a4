@@ -44,16 +44,5 @@ public class MainActivity extends AppCompatActivity {
         // Navigation Controller will automatically manage switching between
         // fragments when options are clicked
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navController);
-
-        // TODO: Move to FragmentNowPlaying
-//        // Configure API Client
-//        this.api = RetrofitClient.getInstance().getApi();
-//        // configure the recyclerview
-//        adapter = new ItemAdapter(this, movieItemsList);
-//        binding.rvMovies.setAdapter(adapter);
-//        binding.rvMovies.setLayoutManager(new LinearLayoutManager(this));
-//        // Get API data
-//        Call<ItemResponse> request = this.api.getAllItems();
-        //
     }
 }

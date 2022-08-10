@@ -51,7 +51,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
         public void bind(Context context, Movie currentItem){
             // TODO: Write the code to update recycler view's row layout
+            int rating = 0;
             itemBinding.tvTitle.setText(currentItem.getTitle());
+            rating = (int)Math.round(10 * currentItem.getVote_average());
+            itemBinding.tvRating.setText((Integer.toString(rating)) + "% ");
+            itemBinding.tvDescription.setText(currentItem.getOverview());
+
         }
     }
 }
