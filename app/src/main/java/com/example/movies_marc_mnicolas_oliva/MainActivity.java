@@ -27,11 +27,6 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-    private ArrayList<Movie> movieItemsList = new ArrayList<>();
-
-    private ItemAdapter adapter;
-
-    private API api;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
