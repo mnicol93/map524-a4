@@ -90,4 +90,5 @@ public class FragmentNowPlaying extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }

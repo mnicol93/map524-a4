@@ -55,6 +55,10 @@ public class Movie {
         return release_date;
     }
 
+    public String getImgUrl() {
+        return "https://image.tmdb.org/t/p/w500/" + imgUrl;
+    }
+
     public double getVote_average() {
         return vote_average;
     }

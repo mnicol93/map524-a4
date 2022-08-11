@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.movies_marc_mnicolas_oliva.databinding.CustomRowLayoutBinding;
 import com.example.movies_marc_mnicolas_oliva.models.Movie;
 
@@ -56,6 +57,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             rating = (int)Math.round(10 * currentItem.getVote_average());
             itemBinding.tvRating.setText((Integer.toString(rating)) + "% ");
             itemBinding.tvDescription.setText(currentItem.getOverview());
+
+            Glide.with(context).load(currentItem.getImgUrl()).into(itemBinding.ivItemPhoto);
+
 
         }
     }
