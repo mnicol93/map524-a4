@@ -57,9 +57,6 @@ public class QuantityAdapter extends RecyclerView.Adapter<QuantityAdapter.ItemVi
         }
 
         public void bind(Context context, MovieEntity currentItem){
-
-            Log.d("ABCD", "Hola");
-
             itemBinding.tvTitle.setText(currentItem.getTitle());
             itemBinding.tvQuantity.setText("Tickets purchased: " + currentItem.getQuantity());
 

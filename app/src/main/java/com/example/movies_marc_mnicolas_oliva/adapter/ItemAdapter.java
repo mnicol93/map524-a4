@@ -71,15 +71,24 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
                 @Override
                 public void onClick(View v) {
                     // Add one to Database
-                    Snackbar mySnack = Snackbar.make(v, "Ticket purchased.",
-                            Snackbar.LENGTH_SHORT);
-                    mySnack.show();
-
                     String title = currentItem.getTitle();
+                    int id = currentItem.getId();
 
-                    MovieEntity movie = new MovieEntity(title, 1);
+                    MovieEntity currentMovie = db.movieDAO().getMovieById(id);
 
-                    db.movieDAO().insertMovie(movie);
+                    if(currentMovie == null) {
+                        //MovieEntity movie = new MovieEntity(title, 1);
+                        db.movieDAO().insertMovie(new MovieEntity(title, 1, id));
+
+                        Snackbar mySnack = Snackbar.make(v, "Ticket purchased.",
+                                Snackbar.LENGTH_SHORT);
+                        mySnack.show();
+                    }
+                    else{
+                        // Update adding one
+                        Log.d("ABC", "BIEN");
+                    }
+
                 }
             });
         }

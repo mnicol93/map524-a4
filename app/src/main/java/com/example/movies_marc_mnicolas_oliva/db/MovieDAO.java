@@ -21,4 +21,7 @@ public interface MovieDAO {
 
     @Query("SELECT * FROM movies_table")
     public List<MovieEntity> getAllMovies();
+
+    @Query("SELECT * FROM movies_table WHERE id = :movieId")
+    public MovieEntity getMovieById(int movieId);
 }

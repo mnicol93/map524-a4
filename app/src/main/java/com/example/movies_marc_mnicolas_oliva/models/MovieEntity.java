@@ -10,12 +10,13 @@ public class MovieEntity {
     private String title;
     private int quantity;
 
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     private int id;
 
-    public MovieEntity(String title, int quantity){
+    public MovieEntity(String title, int quantity, int id){
         this.title = title;
         this.quantity = quantity;
+        this.id = id;
     }
 
     public String getTitle() {
