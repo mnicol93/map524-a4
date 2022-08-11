@@ -84,7 +84,7 @@
             android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen."
             android:textSize="14sp"
             android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@+id/tvBuyTicket"
+            app:layout_constraintBottom_toTopOf="@+id/btnBuyTicket"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +92,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/tvBuyTicket"
+            android:id="@+id/btnBuyTicket"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
