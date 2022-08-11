@@ -79,16 +79,15 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
                     if(currentMovie == null) {
                         //MovieEntity movie = new MovieEntity(title, 1);
                         db.movieDAO().insertMovie(new MovieEntity(title, 1, id));
-
-                        Snackbar mySnack = Snackbar.make(v, "Ticket purchased.",
-                                Snackbar.LENGTH_SHORT);
-                        mySnack.show();
                     }
                     else{
                         // Update adding one
-                        Log.d("ABC", "BIEN");
+                        currentMovie.addQuantity();
+                        db.movieDAO().updateMovie(currentMovie);
                     }
-
+                    Snackbar mySnack = Snackbar.make(v, "Ticket purchased.",
+                            Snackbar.LENGTH_SHORT);
+                    mySnack.show();
                 }
             });
         }

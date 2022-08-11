@@ -3,9 +3,11 @@ package com.example.movies_marc_mnicolas_oliva.db;
 import static androidx.room.OnConflictStrategy.IGNORE;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import com.example.movies_marc_mnicolas_oliva.models.Movie;
 import com.example.movies_marc_mnicolas_oliva.models.MovieEntity;
@@ -24,4 +26,10 @@ public interface MovieDAO {
 
     @Query("SELECT * FROM movies_table WHERE id = :movieId")
     public MovieEntity getMovieById(int movieId);
+
+    @Update
+    public void updateMovie(MovieEntity movie);
+
+    @Delete
+    public void deleteMovie(MovieEntity movie);
 }

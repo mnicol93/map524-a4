@@ -12,7 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.movies_marc_mnicolas_oliva.MainActivity;
 import com.example.movies_marc_mnicolas_oliva.R;
+import com.example.movies_marc_mnicolas_oliva.adapter.OnRowItemClickListener;
 import com.example.movies_marc_mnicolas_oliva.adapter.QuantityAdapter;
 import com.example.movies_marc_mnicolas_oliva.databinding.FragmentNowPlayingBinding;
 import com.example.movies_marc_mnicolas_oliva.databinding.FragmentTicketsBinding;

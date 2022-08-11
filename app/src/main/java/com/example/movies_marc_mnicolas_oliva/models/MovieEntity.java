@@ -35,6 +35,8 @@ public class MovieEntity {
         this.quantity = quantity;
     }
 
+    public void addQuantity(){ this.quantity++; }
+
     public int getId() {
         return id;
     }

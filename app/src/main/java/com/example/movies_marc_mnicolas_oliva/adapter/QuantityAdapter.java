@@ -1,6 +1,7 @@
 package com.example.movies_marc_mnicolas_oliva.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,9 +58,22 @@ public class QuantityAdapter extends RecyclerView.Adapter<QuantityAdapter.ItemVi
         }
 
         public void bind(Context context, MovieEntity currentItem){
+            MyDatabase db;
+
+            db = MyDatabase.getDatabase(context.getApplicationContext());
+
             itemBinding.tvTitle.setText(currentItem.getTitle());
             itemBinding.tvQuantity.setText("Tickets purchased: " + currentItem.getQuantity());
 
+            itemBinding.getRoot().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    db.movieDAO().deleteMovie(currentItem);
+                    Snackbar mySnack = Snackbar.make(v, "Deleted!",
+                            Snackbar.LENGTH_SHORT);
+                    mySnack.show();
+                }
+            });
         }
     }
 }
