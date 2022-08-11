@@ -3,7 +3,9 @@ package com.example.movies_marc_mnicolas_oliva.adapter;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.movies_marc_mnicolas_oliva.databinding.CustomRowLayoutBinding;
 import com.example.movies_marc_mnicolas_oliva.models.Movie;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -60,7 +63,15 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
             Glide.with(context).load(currentItem.getImgUrl()).into(itemBinding.ivItemPhoto);
 
-
+            itemBinding.btnBuyTicket.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Add one to Database
+                    Snackbar mySnack = Snackbar.make(v, "Ticket purchased.",
+                            Snackbar.LENGTH_SHORT);
+                    mySnack.show();
+                }
+            });
         }
     }
 }
