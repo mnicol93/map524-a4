@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.example.movies_marc_mnicolas_oliva.R;
 import com.example.movies_marc_mnicolas_oliva.adapter.ItemAdapter;
 import com.example.movies_marc_mnicolas_oliva.databinding.FragmentNowPlayingBinding;
+import com.example.movies_marc_mnicolas_oliva.db.MyDatabase;
 import com.example.movies_marc_mnicolas_oliva.models.ItemResponse;
 import com.example.movies_marc_mnicolas_oliva.models.Movie;
 import com.example.movies_marc_mnicolas_oliva.network.API;
@@ -47,7 +48,6 @@ public class FragmentNowPlaying extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
-
         // Click handlers and logic
         // Configure API Client
         this.api = RetrofitClient.getInstance().getApi();

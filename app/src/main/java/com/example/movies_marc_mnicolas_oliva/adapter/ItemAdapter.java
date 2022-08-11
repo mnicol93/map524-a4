@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.movies_marc_mnicolas_oliva.databinding.CustomRowLayoutBinding;
+import com.example.movies_marc_mnicolas_oliva.db.MyDatabase;
 import com.example.movies_marc_mnicolas_oliva.models.Movie;
+import com.example.movies_marc_mnicolas_oliva.models.MovieEntity;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
@@ -53,7 +55,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         }
 
         public void bind(Context context, Movie currentItem){
-            // TODO: Write the code to update recycler view's row layout
+            MyDatabase db;
+
+            db = MyDatabase.getDatabase(context.getApplicationContext());
+
             int rating = 0;
             itemBinding.tvTitle.setText(currentItem.getTitle());
             rating = (int)Math.round(10 * currentItem.getVote_average());
@@ -69,48 +74,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
                     Snackbar mySnack = Snackbar.make(v, "Ticket purchased.",
                             Snackbar.LENGTH_SHORT);
                     mySnack.show();
+
+                    String title = currentItem.getTitle();
+
+                    MovieEntity movie = new MovieEntity(title, 1);
+
+                    db.movieDAO().insertMovie(movie);
                 }
             });
         }
     }
 }
-
-
-//            itemBinding.tvCharacterName.setText(currentItem.getName());
-//            itemBinding.tvOrigin
-//                    .setText("Originally From: " + currentItem.getOrigin().getName());
-//
-//            itemBinding.tvLastKnownLocation
-//                    .setText("Last Known Location: " + currentItem.getLastKNownLocation().getName());
-
-            // load the image
-            // TODO: Glide.with(context).load(currentItem.).into(itemBinding.ivCharacterPhoto);
-
-//            // update the text of the status
-//            itemBinding.tvStatus.setText(currentItem.getStatus());
-//
-//            String currentStatus = currentItem.getStatus();
-//            if (currentStatus.contentEquals("Alive")) {
-//                // set the background color: green
-//                itemBinding.tvStatus.setBackgroundColor(Color.parseColor("#27ae60"));
-//            }
-//            else if (currentStatus.contentEquals("Dead")) {
-//                // set the background color: red
-//                itemBinding.tvStatus.setBackgroundColor(Color.parseColor("#c0392b"));
-//            }
-//            else {
-//                // set the background color: grey
-//                itemBinding.tvStatus.setBackgroundColor(Color.parseColor("#34495e"));
-//            }
-
-
-//            // click detection
-//            itemBinding.getRoot().setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    clickListener.OnItemClickListener(currentItem);
-//                }
-//            });
-//        }
-//    }
-//}

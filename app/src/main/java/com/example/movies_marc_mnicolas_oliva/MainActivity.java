@@ -13,6 +13,7 @@ import android.util.Log;
 
 import com.example.movies_marc_mnicolas_oliva.adapter.ItemAdapter;
 import com.example.movies_marc_mnicolas_oliva.databinding.ActivityMainBinding;
+import com.example.movies_marc_mnicolas_oliva.db.MyDatabase;
 import com.example.movies_marc_mnicolas_oliva.models.ItemResponse;
 import com.example.movies_marc_mnicolas_oliva.models.Movie;
 import com.example.movies_marc_mnicolas_oliva.network.API;
